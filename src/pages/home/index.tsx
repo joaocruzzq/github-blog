@@ -1,9 +1,16 @@
+import { HomeContainer, HomeMainContent } from "./styles";
+
+import { SearchForm } from "./components/search-form";
 import { ProfileCard } from "./components/profile-card";
 
 export function Home() {
    return (
-      <div>
+      <HomeContainer>
          <ProfileCard />
-      </div>
+
+         <HomeMainContent>
+            <SearchForm />
+         </HomeMainContent>
+      </HomeContainer>
    )
 }

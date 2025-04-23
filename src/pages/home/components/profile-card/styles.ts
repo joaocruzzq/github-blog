@@ -6,8 +6,6 @@ export const ProfileContainer = styled.div`
 
    gap: 2rem;
    border-radius: 0.625rem;
-
-   max-width: 54rem;
    
    margin: -5.5rem auto 0;
    padding: 2rem 2rem 2rem 2.5rem;
