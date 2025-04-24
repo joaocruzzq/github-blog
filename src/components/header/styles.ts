@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeaderContainer = styled.div`
    z-index: -1;
    
-   height: 18.5rem;
+   min-height: 18.5rem;
    position: relative;
    
    filter: brightness(1.25);

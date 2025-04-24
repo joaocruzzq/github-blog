@@ -73,6 +73,11 @@ export const ProfileHeader = styled.div`
       &:hover {
          border-bottom: 1px solid ${props => props.theme.blue};
       }
+
+      &:focus {
+         border-radius: 0.375rem;
+         outline: 2px solid ${props => props.theme["base-label"]};
+      }
    }
 `
 
