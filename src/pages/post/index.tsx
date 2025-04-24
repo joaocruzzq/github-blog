@@ -1,5 +1,14 @@
+import { PostDetailsCard } from "./components/post-card";
+import { PostMainContent, PostPageContainer } from "./styles";
+
 export function Post() {
    return (
-      <h1>Post</h1>
+      <PostPageContainer>
+         <PostDetailsCard />
+
+         <PostMainContent>
+            
+         </PostMainContent>
+      </PostPageContainer>
    )
 }
