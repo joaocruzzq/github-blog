@@ -42,7 +42,6 @@ export function ProfileCard() {
 
                <a href={userInfo?.html_url} target="_blank">
                   github
-
                   <FontAwesomeIcon icon={faUpRightFromSquare} />
                </a>
             </ProfileHeader>

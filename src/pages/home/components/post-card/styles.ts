@@ -30,6 +30,14 @@ export const PostCardContainer = styled.button`
       text-align: left;
       font-size: 1.25rem;
       color: ${props => props.theme["base-title"]};
+
+      display: -webkit-box;
+
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
    }
 
    header > span {

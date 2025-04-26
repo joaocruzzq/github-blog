@@ -1,20 +1,47 @@
 import { PostCardContainer } from "./styles";
 
-export function PostCard() {
+import { ptBR } from "date-fns/locale";
+import { formatDistanceToNow } from "date-fns";
+
+import { useNavigate } from "react-router-dom";
+
+interface PostCardType {
+   body: string
+   title: string
+   number: number
+   created_at: string
+}
+
+interface PostCardProps {
+   data: PostCardType
+}
+
+export function PostCard({ data }: PostCardProps) {
+   const formattedDate = formatDistanceToNow(new Date(data.created_at) , {
+      locale: ptBR,
+      addSuffix: true
+   })
+
+   const navigate = useNavigate()
+
+   function handleOpenPost() {
+      navigate(`/post/${data.number}`)
+   }
+
    return (
-      <PostCardContainer>
+      <PostCardContainer onClick={handleOpenPost}>
          <header>
             <h1>
-               JavaScript data types and data structures
+               {data.title}
             </h1>
 
             <span>
-               Há 1 dia
+               {formattedDate}
             </span>
          </header>
 
          <p>
-            Programming languages all have built-in data structures, but these often differ from one language to another. This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.
+            {data.body}
          </p>
       </PostCardContainer>
    )

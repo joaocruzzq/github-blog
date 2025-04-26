@@ -2,16 +2,15 @@ import Markdown from "react-markdown";
 
 import { PostMainContent, PostPageContainer } from "./styles";
 
-import { PostCardType, PostDetailsCard } from "./components/post-card";
+import { PostCardType, PostDetailsCard } from "./components/post-details-card";
 
 import { api } from "../../lib/axios";
 
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { formatDistanceToNow } from "date-fns"
-
 import { ptBR } from "date-fns/locale"
+import { formatDistanceToNow } from "date-fns"
 
 export interface PostProps {
    body: string

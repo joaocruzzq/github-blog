@@ -7,21 +7,30 @@ import { ProfileCard } from "./components/profile-card";
 import { api } from "../../lib/axios";
 import { useEffect, useState } from "react";
 
-interface IssuesProps {
+interface IssueType {
+   id: number
+   body: string
+   title: string
+   number: number
+   created_at: string
    total_count: number
 }
 
 export function Home() {
-   const [issue, setIssue] = useState<IssuesProps>()
+   const [issueList, setIssueList] = useState<IssueType[]>([])
+   const [issueCounter, setIssueCounter] = useState(0)
 
    async function fetchIssues() {
       const response = await api.get("/search/issues?q=repo:joaocruzzq/github-blog")
-      setIssue(response.data)
+      setIssueList(response.data.items)
+      setIssueCounter(response.data.total_count)
    }
 
    useEffect(() => {
       fetchIssues()
    }, [])
+
+   console.log(issueList)
 
    return (
       <HomeContainer>
@@ -32,7 +41,7 @@ export function Home() {
                <h1>Publicações</h1>
 
                <span>
-                  {issue?.total_count}
+                  {issueCounter}
                   {" "} publicações
                </span>
             </header>
@@ -40,7 +49,14 @@ export function Home() {
             <SearchForm />
 
             <PostsContainer>
-               <PostCard />
+               {
+                  issueList.map((issue) => (
+                     <PostCard
+                        key={issue.id}
+                        data={issue}
+                     />
+                  ))
+               }
             </PostsContainer>
          </HomeMainContent>
       </HomeContainer>
