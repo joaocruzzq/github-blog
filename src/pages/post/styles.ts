@@ -8,7 +8,7 @@ export const PostPageContainer = styled.div`
 export const PostMainContent = styled.div`
    display: grid;
    row-gap: 1.5rem;
-   padding: 2.5rem 2rem;
+   padding: 2.5rem 2rem 4rem;
 `
 
 export const MarkdownContainer = styled.div`

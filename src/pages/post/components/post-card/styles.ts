@@ -33,11 +33,12 @@ export const PostDetailsHeader = styled.div`
 
       gap: 0.5rem;
       align-items: center;
-
+      
       font-weight: bold;
       line-height: 160%;
       font-size: 0.75rem;
-
+      
+      cursor: pointer;
       text-decoration: none;
       text-transform: uppercase;
 
