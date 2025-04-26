@@ -20,8 +20,9 @@ export function Home() {
    const [issueList, setIssueList] = useState<IssueType[]>([])
    const [issueCounter, setIssueCounter] = useState(0)
 
-   async function fetchIssues() {
-      const response = await api.get("/search/issues?q=repo:joaocruzzq/github-blog")
+   async function fetchIssues(query?: string) {
+      const response = await api.get(`/search/issues?q=${query}repo:joaocruzzq/github-blog`)
+
       setIssueList(response.data.items)
       setIssueCounter(response.data.total_count)
    }
@@ -46,7 +47,9 @@ export function Home() {
                </span>
             </header>
 
-            <SearchForm />
+            <SearchForm
+               onSearch={fetchIssues}
+            />
 
             <PostsContainer>
                {
