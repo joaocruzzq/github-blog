@@ -3,6 +3,10 @@ import styled from "styled-components";
 export const HomeContainer = styled.div`
    margin: 0 auto;
    max-width: 54rem;
+
+   @media (max-width: 768px) {
+      margin: 0 1.75rem;
+   }
 `
 
 export const HomeMainContent = styled.div`
@@ -25,6 +29,10 @@ export const HomeMainContent = styled.div`
       font-size: 0.875rem;
       color: ${props => props.theme["base-span"]};
    }
+
+   @media (max-width: 768px) {
+      margin: -2rem 0.25rem;
+   }
 `
 
 export const PostsContainer = styled.div`
@@ -33,4 +41,8 @@ export const PostsContainer = styled.div`
 
    display: grid;
    grid-template-columns: 1fr 1fr;
+
+   @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+   }
 `

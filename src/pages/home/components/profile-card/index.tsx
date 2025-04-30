@@ -1,4 +1,4 @@
-import { GitUserInfo, ProfileContainer, ProfileContenet, ProfileHeader } from "./styles";
+import { GitUserInfo, ProfileContainer, ProfileContent, ProfileHeader } from "./styles";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -34,14 +34,14 @@ export function ProfileCard() {
       <ProfileContainer>
          <img src={userInfo?.avatar_url} alt="" />
 
-         <ProfileContenet>
+         <ProfileContent>
             <ProfileHeader>
                <h1>
                   {userInfo?.name}
                </h1>
 
                <a href={userInfo?.html_url} target="_blank">
-                  github
+                  <p>github</p>
                   <FontAwesomeIcon icon={faUpRightFromSquare} />
                </a>
             </ProfileHeader>
@@ -66,7 +66,7 @@ export function ProfileCard() {
                   {userInfo?.followers} seguidores
                </GitUserInfo>
             </section>
-         </ProfileContenet>
+         </ProfileContent>
       </ProfileContainer>
    )
 }

@@ -27,11 +27,11 @@ export function PostDetailsCard({ data } : PostCardProps) {
          <PostDetailsHeader>
             <a onClick={() => navigate(-1)} target="_blank">
                <FontAwesomeIcon icon={faChevronLeft} />
-               voltar
+               <p>voltar</p>
             </a>
 
             <a href={data?.html_url} target="_blank">
-               ver no github
+               <p>ver no github</p>
                <FontAwesomeIcon icon={faUpRightFromSquare} />
             </a>
          </PostDetailsHeader>

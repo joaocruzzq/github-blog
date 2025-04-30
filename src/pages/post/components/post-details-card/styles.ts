@@ -22,6 +22,14 @@ export const PostDetailsContainer = styled.div`
       display: flex;
       gap: 1.5rem;
    }
+
+   @media (max-width: 768px) {
+      width: 100%;
+
+      section {
+         display: none;
+      }
+   }
 `
 
 export const PostDetailsHeader = styled.div`

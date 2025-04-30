@@ -21,7 +21,7 @@ export function Home() {
    const [issueCounter, setIssueCounter] = useState(0)
 
    async function fetchIssues(query?: string) {
-      const response = await api.get(`/search/issues?q=${query}repo:joaocruzzq/github-blog`)
+      const response = await api.get(`/search/issues?q=${query ? query : ""}repo:joaocruzzq/github-blog`)
 
       setIssueList(response.data.items)
       setIssueCounter(response.data.total_count)
