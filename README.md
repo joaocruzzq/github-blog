@@ -12,7 +12,7 @@ Follow these steps to run the project locally:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/joaocruzzq/github-blog
+   git clone https://github.com/joaocruzzq/github-blog.git
    cd github-blog
    ```
 
