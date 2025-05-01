@@ -1,4 +1,4 @@
-# DT Money <img src="./src/assets/browser-logo.svg" height="40px" align="left"> 
+# GitHub Blog <img src="./src/assets/browser-logo.svg" height="40px" align="left"> 
 
 Share your ideas and updates through a modern blog interface powered by GitHub. Write posts as issues, manage content directly from your repository, and let the system take care of fetching and displaying everything in real time. With a clean layout and seamless integration, turning your GitHub into a personal blog has never been easier.
 
